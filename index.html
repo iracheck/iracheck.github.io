@@ -4,21 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ira Russell Check | Portfolio</title>
+
     <!--JS-->
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body class="bg-blue-50/75 text-slate-900">
+  <body class="min-h-screen bg-slate-50 text-slate-900">
     <!--Navigation Bar-->
-<div class="flex w-fit mx-auto justify-center gap-8 
-            my-6 px-5 py-2 rounded-full bg-white/20
-            border border-slate-200/40 backdrop-blur-md shadow-sm">
-      <a class="navbutton">About</a>
+    <div class="navbar">
       <a class="navbutton">Work Experience</a>
       <a class="navbutton">Projects</a>
       <a class="navbutton">Skills</a>
     </div>
 
-    <!--Main Body-->
+    <!------Main Body------->
+
+    <!--About Me-->
+    <div class="section grid grid-cols-1 md:grid-cols-5 gap-10">
+      <!--Hero Segment-->
+      <div class="md:col-span-4">
+        <h1 class="header-text mb-2">Ira Check</h1>
+        <p class="paragraph-text">I am a Penn State student graduating in 2027 with a degree in Computer Science and minor in Cybersecurity Computational Foundations.</p>
+        <br>
+        <p class="paragraph-text">Currently, I am remotely handling web development and IT support for a local business, while working on a Checkers-playing robotic arm mechatronics project in my spare time.</p>
+      </div>
+
+      <!--Links-->
+      <div class="flex flex-col justify-center vertical  gap-1 mt-5">
+        
+        <a href="https://github.com/iracheck" target="_blank" class="flex items-center h-fit navbutton gap-0.5 ">
+          <img src="src/assets/github_logo.png" height="15" width="15" class="mx-1"> 
+          <p>GitHub</p> 
+        </a>
+
+        <a href="https://linkedin.com/in/iracheck" target="_blank" class="flex items-center h-fit navbutton gap-0.5">
+          <img src="src/assets/linkedin_logo.png" height="15" width="15" class="mx-1"> 
+          <p>LinkedIn</p> 
+
+        </a>
+          <a href="public/resume.pdf" download="Ira_Check_Resume" class="flex items-center h-fit navbutton gap-0.5">
+          <img src="src/assets/download_icon.png" height="15" width="15" class="mx-1"> 
+          <p>Resume</p> 
+        </a>
+
+      </div>
+
+    </div>
+
+        <!--Work Experience-->
+    <div class="section">
+      <p class="header-text">Work Experience</p>
+      <div class="mt-56"></div>
+    </div>
+
+        <!--Projects-->
+    <div class="section">
+      <p class="header-text">Projects</p>
+      <div class="mt-56"></div>
+    </div>
+
+        <!--Skills-->
+    <div class="section">
+      <p class="header-text">Skills</p>
+      <div class="mt-56"></div>
+    </div>
 
     
   </body>
