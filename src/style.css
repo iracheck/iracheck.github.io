@@ -7,6 +7,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 19.2px;
 }
 
 .job-card {
@@ -16,7 +17,7 @@ html {
 
 .highlighted-job-card {
     @apply max-w-3xl mx-auto mt-8 px-6 py-5 rounded-2xl 
-    border border-blue-200/45 bg-slate-50/20;
+    border border-blue-200/45 bg-slate-50/15;
 }
 
 .section {
