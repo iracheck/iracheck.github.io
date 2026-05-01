@@ -1,12 +1,33 @@
 @import "tailwindcss";
 
 body {
-  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.job-card {
+    @apply max-w-3xl mx-auto mt-8 px-6 py-5 rounded-2xl 
+    border border-slate-200/30 bg-white/70;
+}
+
+.highlighted-job-card {
+    @apply max-w-3xl mx-auto mt-8 px-6 py-5 rounded-2xl 
+    border border-blue-200/45 bg-white/80;
+}
+
+.section {
+    @apply max-w-3xl mx-auto mt-8 px-6 py-5 rounded-3xl 
+    border border-slate-200/30 bg-white/70 shadow-sm;
+}
+
+.navbar {
+    @apply flex w-fit mx-auto justify-center gap-8 
+    my-6 px-5 py-2 rounded-full bg-white/40
+    border border-slate-200/40 backdrop-blur-md shadow-md;
 }
 
 .navbutton {
@@ -35,15 +56,4 @@ html {
 .mini-text {
     @apply text-slate-300 font-mono leading-relaxed;
     font-size:small
-}
-
-.navbar {
-    @apply flex w-fit mx-auto justify-center gap-8 
-    my-6 px-5 py-2 rounded-full bg-white/40
-    border border-slate-200/40 backdrop-blur-md shadow-md;
-}
-
-.section {
-    @apply max-w-3xl mx-auto mt-8 px-6 py-5 rounded-3xl 
-    border border-slate-200/30 bg-white/70 shadow-sm;
 }
