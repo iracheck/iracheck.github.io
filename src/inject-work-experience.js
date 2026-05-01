@@ -3,28 +3,28 @@ const workExperienceData = [
         company: "Broken Spoke Bicycle Shop",
         role: "IT & Web Developer",
         duration: "May 2026 - Present",
-        description: ["TBA"],
+        description: ["Bullet point","Bullet point","Bullet point","Bullet point"],
         highlight: true
     },
     {
         company: "Chick-fil-A",
         role: "BOH Team Member",
         duration: "May 2026 - Present",
-        description: ["TBA"],
+        description: ["Bullet point","Bullet point","Bullet point","Bullet point"],
         highlight: false
     },
     {
         company: "The Giant Company",
         role: "Center Store Associate",
         duration: "May 2024 - September 2025",
-        description: ["TBA"],
+        description: ["Bullet point","Bullet point","Bullet point","Bullet point"],
         highlight: false
     },
     {
         company: "Burger King",
         role: "Team Member",
         duration: "August 2022 - February 2023",
-        description: ["TBA", "Test"],
+        description: ["Bullet point","Bullet point","Bullet point","Bullet point"],
         highlight: false
     }
 ]
