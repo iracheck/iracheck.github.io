@@ -1,5 +1,9 @@
 import './style.css'
-import { renderExperience } from './inject-work-experience'
+import { initializeExperienceToggler, renderExperience } from './inject-work-experience'
 
+function main() {
+    initializeExperienceToggler()
+    renderExperience("work-experience-container")
+}
 
-renderExperience("work-experience-container")
+main()

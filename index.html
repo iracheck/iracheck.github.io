@@ -51,7 +51,15 @@
 
     <!--Work Experience-->
     <div id="work-experience" class="section">
-      <p class="header-text">Work Experience</p>
+      <div class="flex flex-row items-center justify-between w-full">
+        <p class="header-text">Work Experience</p>
+        
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="toggle-technical" name="toggle-technical" value="toggle-technical" class="w-4 h-4 cursor-pointer accent-blue-500">
+          <label for="toggle-technical" class="mini-text cursor-pointer">Show only technical roles</label>
+        </div>
+      </div>
+      
       <section id="work-experience-container" class="mt-4 space-y-8">
       </section>
     </div>
