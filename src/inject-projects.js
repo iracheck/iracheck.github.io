@@ -18,25 +18,25 @@ const projectData = [
 export function renderProjects(containerID) {
     const container = document.getElementById(containerID);
 
+    container.innerHTML = '';
 
-    workExperienceData.forEach(job => {
+
+    projectData.forEach(proj => {
         let descriptionText = ``
-        job.description.forEach(bullet => {
+        proj.description.forEach(bullet => {
             descriptionText += `<p class="paragraph-text">‣ ${bullet}</p>`
         })
 
+        let skillsText = ``
+        proj.skills.forEach(bullet => {
+            skillsText += `<p class="paragraph-test">‣ ${bullet}</p>`
+        })
+
         let highlight = "highlighted-job-card"
-        if (!job.highlight) {
+        if (!proj.highlight) {
             highlight = "job-card"
         }
 
-        container.innerHTML += `        <div class="${highlight}">
-          <div class="flex">
-            <h1 class="subheader-text">${job.role}</h1>
-            <p class="paragraph-text my-1.5 mx-1">@ ${job.company}</p>
-            <p class="paragraph-text my-1.5 ml-auto">${job.duration}</p>
-          </div>
-          <p class="paragraph-text">${descriptionText}</p>
-        </div>`
+        container.innerHTML += `test`
     });
 }
