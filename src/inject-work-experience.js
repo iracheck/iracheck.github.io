@@ -15,7 +15,7 @@ const workExperienceData = [
         role: "BOH Team Member",
         duration: "May 2026 - Present",
         description: ["Starting on May 12th, 2026"],
-        highlight: false
+        highlight: true
     },
     {
         company: "The Giant Company",
@@ -39,12 +39,15 @@ export function initializeExperienceToggler() {
     const technicalToggle = document.getElementById('toggle-technical');
 
     technicalToggle.addEventListener("change", (event => {
-        renderExperience("work-experience-container", technicalToggle.checked);
+        renderExperience("work-experience-container");
     }))
 }
 
-export function renderExperience(containerID, filter = false) {
+export function renderExperience(containerID) {
     const container = document.getElementById(containerID);
+    const technicalToggle = document.getElementById('toggle-technical');
+
+    let filter = technicalToggle.checked;
 
     container.innerHTML = '';
 
@@ -64,10 +67,10 @@ export function renderExperience(containerID, filter = false) {
         }
 
         container.innerHTML += `        <div class="${highlight}">
-          <div class="flex">
-            <h1 class="subheader-text">${job.role}</h1>
-            <p class="paragraph-text my-1.5 mx-1">@ ${job.company}</p>
-            <p class="paragraph-text my-1.5 ml-auto">${job.duration}</p>
+          <div class="flex mb-1">
+            <p class="subheader-text">${job.role}</p>
+            <p class="paragraph-text mx-1">@ ${job.company}</p>
+            <p class="paragraph-text ml-auto">${job.duration}</p>
           </div>
           <p class="paragraph-text">${descriptionText}</p>
         </div>`

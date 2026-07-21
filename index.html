@@ -13,11 +13,11 @@
         <p class="navtext">Ira Check</p>
         <a href="#work-experience" class="navbutton">Work Experience</a>
         <a href="#projects" class="navbutton">Projects</a>
-        <a href="#skills" class="navbutton">Skills</a>
+        <!-- <a href="#skills" class="navbutton">Skills</a> -->
 
         <a href="https://github.com/iracheck" target="_blank" class="navbutton ml-auto">GitHub</a>
         <a href="https://linkedin.com/in/iracheck" target="_blank" class="navbutton">LinkedIn</a>
-        <a href="public/resume.pdf" download="Ira_Check_Resume" class="navbutton">Resume</a>
+        <a href="/resume.pdf" download="Ira_Check_Resume" class="navbutton">Resume</a>
 
     </nav>
 
@@ -27,7 +27,7 @@
     <div id="about-me" class="section grid grid-cols-1 md:grid-cols-5 gap-7">
       <div>
         <p>Sample</p>
-      </div>
+      </div> 
       <!--Hero Segment-->
       <div class="md:col-span-4">
         <h1 class="header-text mb-2">Hello, I'm Ira</h1>
@@ -44,9 +44,9 @@
       <div class="flex flex-row items-center justify-between w-full">
         <p class="header-text">Work Experience</p>
         
-        <div class="flex items-center gap-2">
-          <input type="checkbox" id="toggle-technical" name="toggle-technical" value="toggle-technical" class="w-4 h-4 cursor-pointer accent-blue-500">
-          <label for="toggle-technical" class="mini-text cursor-pointer">Show only technical roles</label>
+        <div class="flex items-center gap-2 mt-1">
+          <input type="checkbox" id="toggle-technical" name="toggle-technical" value="toggle-technical" checked class="w-4 h-4 cursor-pointer accent-blue-500">
+          <label for="toggle-technical" class="mini-text cursor-pointer">Show only highlighted roles</label>
         </div>
       </div>
       
@@ -56,17 +56,20 @@
 
     <!--Projects-->
     <div id="projects" class="section">
-      <p class="header-text">Projects</p>
-      <div class="mt-56"></div>
-
-      <section id="project-container" class="mt-4 space-y-8">
+      <div class="flex flex-row items-center justify-between w-full">
+        <p class="header-text">Projects</p>
+        <div class="flex flex-row gap-2 mt-1">
+          <button class="sorting-button" id="fullstack-button">Full Stack</button>
+          <button class="sorting-button" id="embedded-button">Embedded</button>
+          <button class="sorting-button" id="gamedev-button">Game Dev</button>
+          <button class="sorting-button" id="webdev-button">Web</button>
+        </div>
+         
+      </div>
+      
+      <section id="projects-container" class="mt-4 grid gap-4 grid-cols-1 md:grid-cols-2">
+       
       </section>
-    </div>
-
-    <!--Skills-->
-    <div id="skills" class="section">
-      <p class="header-text">Skills</p>
-      <div class="mt-56"></div>
     </div>
 
 

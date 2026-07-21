@@ -12,20 +12,29 @@ html {
 }
 
 .section {
-    /* We strip the borders/backgrounds here so the grid flows through seamlessly */
     @apply max-w-5xl mx-auto mt-16 px-6;
 }
 
-.job-card {
+.job-card, .highlighted-job-card {
     @apply max-w-5xl mx-auto mt-6 px-6 py-5 rounded-2xl
     border border-slate-900 bg-slate-900/30 backdrop-blur-sm shadow-sm
     transition-all duration-300 hover:border-slate-800 hover:bg-slate-900/60;
 }
 
 .highlighted-job-card {
-    @apply max-w-5xl mx-auto mt-6 px-6 py-5 rounded-2xl
-    border border-blue-950 bg-blue-950/10 backdrop-blur-sm shadow-sm
-    transition-all duration-300 hover:border-blue-900/40 hover:bg-blue-950/20;
+    @apply border-blue-950 bg-blue-950/10 hover:border-blue-900/40 hover:bg-blue-950/20;
+}
+
+.sorting-button, .selected-sorting-button {
+    @apply border border-slate-900 bg-slate-900/30 backdrop-blur-sm shadow-sm rounded-3xl
+    transition-all duration-300 hover:border-slate-800 hover:bg-slate-900/60
+    flex items-center justify-center w-fit px-3 py-0.25
+    font-mono font-medium text-slate-500 text-sm
+    hover:cursor-pointer;
+}
+
+.selected-sorting-button {
+    @apply border-blue-950 bg-blue-950/30 hover:border-blue-900/40 hover:bg-blue-950/20;
 }
 
 /* --- UI COMPONENTS --- */
@@ -61,7 +70,7 @@ html {
 }
 
 .subheader-text {
-    @apply text-xl font-semibold text-slate-200;
+    @apply text-xl font-semibold text-slate-200 -my-1;
 }
 
 .paragraph-text {
