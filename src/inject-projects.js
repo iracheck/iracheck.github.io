@@ -11,8 +11,12 @@ const projectData = [
         name: "Checkers-playing Robotic Arm",
         category: "embedded",
         duration: "March 2026 - Present",
-        description: ["test info", "more test info"],
-        skills: ["Node.js", "Vite", "TailwindCSS", "HTML"],
+        description: [
+            "Built the computer vision pipeline that reads the physical board state from an overhead camera",
+            "Wrote the serial communication layer bridging the control application and the arm's microcontroller",
+            "Implemented the checkers game logic and move validation shared across the vision and hardware layers"
+        ],
+        skills: ["Python", "OpenCV", "C", "Arduino"],
         links: [["SOURCE CODE", "https://github.com/iracheck/checkers-bot"]]
     },
     {
@@ -20,17 +24,35 @@ const projectData = [
         name: "AI Simulation Game Mod",
         category: "game dev",
         duration: "June 2025 - January 2026",
-        description: ["some other test information", "interesting infromation about this project", "okay, i think i like this project"],
-        skills: ["Node.js", "Vite", "TailwindCSS", "HTML"],
+        description: [
+            "Built a GTA V mod that layers more dynamic AI behavior on top of the base simulation",
+            "Shipped and maintained public releases on Nexus Mods, iterating on feedback and bug reports"
+        ],
+        skills: ["C#", "ScriptHookVDotNet"],
         links: [["DOWNLOAD (VERSION 1.1)", "https://www.nexusmods.com/gta5/mods/1430?tab=files"], ["SOURCE CODE", "https://github.com/iracheck/DynamicSimulationMod"]]
+    },
+    {
+        img_src: "src/assets/linkedin_logo.png",
+        name: "Input Remapper Tool",
+        category: "full stack",
+        duration: "February 2025",
+        description: [
+            "Built a GTA V mod that layers more dynamic AI behavior on top of the base simulation",
+            "Shipped and maintained public releases on Nexus Mods, iterating on feedback and bug reports"
+        ],
+        skills: ["C#", "WPF", "XAML"],
+        links: [["SOURCE CODE", "https://github.com/iracheck/pcremote-csharp"]]
     },
     {
         img_src: "src/assets/linkedin_logo.png",
         name: "Portfolio Website",
         category: "web",
         duration: "July 2026",
-        description: ["some other test information", "interesting infromation about this project", "okay, i think i like this project"],
-        skills: ["Node.js", "Vite", "TailwindCSS", "HTML"],
+        description: [
+            "Designed and built this site from scratch with Vite and Tailwind CSS",
+            "Implemented category filtering and dynamic rendering for the projects and work experience sections"
+        ],
+        skills: ["JavaScript", "Vite", "Tailwind CSS", "HTML"],
         links: [["SOURCE CODE", "https://github.com/iracheck/iracheck.github.io"]]
     },
 ];
@@ -40,6 +62,14 @@ const filterState = {
     "web": false,
     "embedded": false,
     "game dev": false
+};
+
+const categoryLabels = {
+    "full stack": "Full stack",
+    "web": "Web",
+    "embedded": "Embedded",
+    "game dev": "Game dev",
+    "other": "Other"
 };
 
 export function initializeCategorySelectors() {
@@ -98,28 +128,28 @@ export function renderProjects(containerID) {
                 descriptionText += `<p class="paragraph-text">‣ ${bullet}</p>`;
             });
 
-            let skillsText = '<p class="paragraph-text mt-auto"> Skills: ';
+            let skillsText = '<p class="mini-text mt-auto pt-3"> ';
             proj.skills.forEach((skill, index) => {
-                skillsText += `${skill}${index < proj.skills.length - 1 ? ', ' : ''}`;
+                skillsText += `${skill}${index < proj.skills.length - 1 ? ' · ' : ''}`;
             });
             skillsText += '</p>';
 
-            let linksText = '<div class="flex gap-6 justify-end">';
+            let linksText = '<div class="flex gap-2 flex-wrap justify-end mt-3">';
             if (Array.isArray(proj.links)) {
                 proj.links.forEach(([label, url]) => {
-                    linksText += `<a href="${url}" target="_blank" class="navbutton">${label}</a>`;
+                    linksText += `<a href="${url}" target="_blank" class="card-link">${label}</a>`;
                 });
             }
             linksText += '</div>';
 
+            const categoryLabel = categoryLabels[proj.category] || proj.category;
+
             container.innerHTML += `
-                <div class="flex job-card flex-col w-full">
-                    <p class="mini-text -mt-3 -ml-2">${proj.category.toUpperCase()}</p>
-                    <img src="${proj.img_src}" alt="Reference photo of ${proj.name}" class="max-h-32 w-full object-contain mb-4 mt-1">
+                <div class="project-card">
+                    <p class="mini-text mb-1">${categoryLabel}</p>
                     <p class="subheader-text">${proj.name}</p>
-                    <p class="paragraph-text mb-3">${proj.duration}</p>
+                    <p class="paragraph-text mb-2 mini-text">${proj.duration}</p>
                     ${descriptionText}
-                    <br>
                     ${skillsText}
                     ${linksText}
                 </div>`;
