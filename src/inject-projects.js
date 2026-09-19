@@ -26,7 +26,7 @@ const projectData = [
         duration: "June 2025 - January 2026",
         description: [
             "Built a GTA V mod that layers more dynamic AI behavior on top of the base simulation",
-            "Shipped and maintained public releases on Nexus Mods, iterating on feedback and bug reports"
+            "Shipped and maintained public releases on Nexus Mods resulting in 500 user downloads, while providing user support for installation and bugfixes"
         ],
         skills: ["C#", "ScriptHookVDotNet"],
         links: [["DOWNLOAD (VERSION 1.1)", "https://www.nexusmods.com/gta5/mods/1430?tab=files"], ["SOURCE CODE", "https://github.com/iracheck/DynamicSimulationMod"]]
@@ -37,8 +37,8 @@ const projectData = [
         category: "full stack",
         duration: "February 2025",
         description: [
-            "Built a GTA V mod that layers more dynamic AI behavior on top of the base simulation",
-            "Shipped and maintained public releases on Nexus Mods, iterating on feedback and bug reports"
+            "Developed a tool that converts XInput into mouse, keyboard, and media control inputs",
+            "Wrote a power saving mode that results in less than 20% of active power usage, while remaining responsive to wake-up calls"
         ],
         skills: ["C#", "WPF", "XAML"],
         links: [["SOURCE CODE", "https://github.com/iracheck/pcremote-csharp"]]

@@ -12,7 +12,7 @@ const workExperienceData = [
     },
     {
         company: "Broken Spoke Bicycle Shop",
-        role: "IT & Web Developer",
+        role: "Web Developer (Freelance)",
         duration: "August 2026 - September 2026",
         description: ["Modernizing a legacy website using HTML/CSS and ReactJS",
             "Engineering a custom CRUD dashboard using React and Firebase that decoupled content management from the source code, empowering a non-technical stakeholder to update business hours and service descriptions in real-time",
