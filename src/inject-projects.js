@@ -43,6 +43,18 @@ const projectData = [
         skills: ["C#", "WPF", "XAML"],
         links: [["SOURCE CODE", "https://github.com/iracheck/pcremote-csharp"]]
     },
+        {
+        img_src: "src/assets/linkedin_logo.png",
+        name: "Chat App Project",
+        category: "full stack",
+        duration: "March 2024 - May 2024",
+        description: [
+            "Designed and built a chat app project with a group of four other classmates with a C backend and Java/Swing frontend.",
+            "Fixed bugs, ensured functionality, and implented many of the features regarding the backend server operation."
+        ],
+        skills: ["C", "Java", "Swing"],
+        links: [["SOURCE CODE", "https://github.com/iracheck/chatapp-group4"]]
+    },
     {
         img_src: "src/assets/linkedin_logo.png",
         name: "Portfolio Website",
@@ -65,10 +77,10 @@ const filterState = {
 };
 
 const categoryLabels = {
-    "full stack": "Full stack",
+    "full stack": "Full Stack",
     "web": "Web",
     "embedded": "Embedded",
-    "game dev": "Game dev",
+    "game dev": "Game Dev",
     "other": "Other"
 };
 

@@ -25,7 +25,8 @@ const workExperienceData = [
         company: "Chick-fil-A",
         role: "BOH Team Member",
         duration: "May 2026 - Present",
-        description: ["Starting on May 12th, 2026"],
+        description: ["Worked with a team to perform Second Mile Service for all customers", 
+            ""],
         highlight: false
     },
     {
@@ -33,7 +34,7 @@ const workExperienceData = [
         role: "Center Store Associate",
         duration: "May 2024 - September 2025",
         description: ["Assumed responsibility for inventory recording when senior staff members were on a leave of absence",
-                      "Trained new employees on Center Store operations", "Obtained OSHA certification with power jacks and power lifts"],
+                      "Trained new employees on Center Store operations", "Obtained OSHA certification with power jacks, power lifts and power forklifts"],
         highlight: false
     },
     {
@@ -41,7 +42,7 @@ const workExperienceData = [
         role: "Team Member",
         duration: "August 2022 - February 2023",
         description: ["Worked with a team to produce sub 1:30 drive-thru times and a positive experience for all customers",
-                      "Trained new employees on speciality and burger boards"],
+                      "Trained new employees on kitchen operations"],
         highlight: false
     }
 ]
