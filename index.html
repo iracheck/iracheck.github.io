@@ -1,107 +1,296 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ira Check's Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg">
-  </head>
-  <body class="min-h-screen">
-    <!--Navigation Bar-->
-    <nav class="navbar">
-      <p class="navtext">Ira Check</p>
-      <a href="#work-experience" class="navbutton">Work Experience</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10191C" />
+
+  <meta
+    name="description"
+    content="Portfolio of Ira Check, a computer science student and software developer at Penn State."
+  />
+
+  <title>Ira Check — Software Developer</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg">
+</head>
+
+<body class="min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#about-me" class="navtext site-logo">
+      <span class="logo-mark">IC<span class="text-[var(--accent)]">.</span></span>
+      <span class="logo-name">IRA CHECK</span>
+    </a>
+
+    <div class="nav-primary">
+      <a href="#about-me" class="navbutton">About</a>
+      <a href="#work-experience" class="navbutton">Experience</a>
       <a href="#projects" class="navbutton">Projects</a>
-      <!-- <a href="#skills" class="navbutton">Skills</a> -->
-
-      <a href="https://github.com/iracheck" target="_blank" class="navbutton ml-auto">GitHub</a>
-      <a href="https://linkedin.com/in/iracheck" target="_blank" class="navbutton">LinkedIn</a>
-      <a href="https://docs.google.com/document/d/13JF_IVp2vJg1kaEqTybbNMR2p1hD95r5Sk_q1Z3OdwY/export?format=pdf" target="_blank" class="navbutton">Resume</a>
-    </nav>
-
-    <!------Main Body------->
-
-    <!--About Me-->
-    <div id="about-me" class="section grid grid-cols-1 md:grid-cols-6 !mt-28">
-      <!--Title Block-->
-      <div class="title-block h-fit">
-        <p class="title-block-heading">Profile</p>
-        <dl class="title-block-list">
-          <div> 
-            <dt>Based in</dt>
-            <dd>State College, PA</dd>
-          </div>
-          <div>
-            <dt>Studying</dt>
-            <dd>B.S. Computer Science, Penn State</dd>
-          </div>
-          <div>
-            <dt>Graduating</dt>
-            <dd>May 2027</dd>
-          </div>
-          <div>
-            <dt>Currently</dt>
-            <dd>Platform Engineering Intern @ Lionchase North America</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!--Hero Segment-->
-      <div class="md:col-span-4 self-center ml-5">
-        <h1 class="header-text mb-2">Hello, I'm Ira</h1>
-        <p class="paragraph-text">I am a Penn State student graduating in May of 2027 with a major in Computer Science and minor in Cybersecurity Computational Foundations.</p>
-        <br>
-        <p class="paragraph-text">Currently, I am handling working as a Platform Engineering Intern at Lionchase North America, while also performing freelance web development work for The Broken Spoke Bicycle Shop.
-                                  In my free time, I am collaborating with a team of three others to produce a checkers-playing robotic arm, specifically engineering the computer vision, serial communication, and game layers of the project. </p>
-      </div>
+      <a href="#gallery" class="navbutton">Gallery</a>
     </div>
 
-    <!--Work Experience-->
-    <div id="work-experience" class="section">
-      <div class="flex flex-row items-center justify-between w-full">
-        <p class="header-text">Work Experience</p>
+    <div class="nav-social">
+      <a href="https://github.com/iracheck"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="navbutton">GitHub ↗</a>
 
-        <div class="flex items-center gap-2 mt-1">
-          <input type="checkbox" id="toggle-technical" name="toggle-technical" value="toggle-technical" checked class="w-4 h-4 cursor-pointer accent-[#C1611F]">
-          <label for="toggle-technical" class="mini-text cursor-pointer">Show only highlighted roles</label>
+      <a href="https://linkedin.com/in/iracheck"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="navbutton">LinkedIn ↗</a>
+
+      <a href="https://docs.google.com/document/d/13JF_IVp2vJg1kaEqTybbNMR2p1hD95r5Sk_q1Z3OdwY/export?format=pdf"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="nav-resume">Resume <span>↗</span></a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO / ABOUT -->
+    <section id="about-me" class="section hero-section">
+
+      <div class="hero-topline">
+        <span class="eyebrow">PORTFOLIO / 2026</span>
+        <span class="hero-topline-right">SOFTWARE + SYSTEMS + HARDWARE</span>
+      </div>
+
+      <div class="hero-layout">
+
+        <div class="hero-content">
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            Computer Science @ Penn State
+          </div>
+
+          <h1 class="hero-title">
+            Hey, I'm <span>Ira.</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            I build software that
+            <span class="hero-subtitle-accent">connects ideas to reality.</span>
+          </h2>
+
+          <p class="hero-description">
+            I'm a computer science student at Penn State with
+            interests in software engineering, embedded systems,
+            and robotics. I enjoy building practical software,
+            solving technical problems, and working across the
+            boundary between hardware and code.
+          </p>
+
+          <p class="hero-description">
+            I'm currently a Platform Engineering Intern at
+            Lionchase North America and working on projects
+            spanning web development, computer vision, and
+            robotic systems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="button-primary">
+              Explore my work <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#work-experience" class="button-secondary">
+              View experience <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROFILE / METADATA -->
+        <aside class="hero-sidebar">
+          <div class="title-block">
+            <div class="title-block-heading profile-heading">
+              <span>PROFILE / DETAILS</span>
+              <span class="profile-symbol">+</span>
+            </div>
+
+            <dl class="title-block-list">
+              <div>
+                <dt>LOCATION</dt>
+                <dd>State College, Pennsylvania</dd>
+              </div>
+
+              <div>
+                <dt>EDUCATION</dt>
+                <dd>Pennsylvania State University</dd>
+                <span class="profile-extra">B.S. Computer Science</span>
+              </div>
+
+              <div>
+                <dt>MINOR</dt>
+                <dd>Cybersecurity Computational Foundations</dd>
+              </div>
+
+              <div>
+                <dt>EXPECTED GRADUATION</dt>
+                <dd>May 2027</dd>
+              </div>
+
+              <div>
+                <dt>CURRENT ROLE</dt>
+                <dd>Platform Engineering Intern</dd>
+                <span class="profile-extra">Lionchase North America</span>
+              </div>
+            </dl>
+
+            <div class="profile-footer">
+              <span>IC / PROFILE</span>
+              <span>001</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <div class="hero-bottomline">
+        <span>SCROLL TO EXPLORE</span>
+        <span aria-hidden="true">↓</span>
+      </div>
+
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="work-experience" class="section content-section">
+
+      <div class="section-topline">
+        <span>01 / PROFESSIONAL</span>
+        <span>EXPERIENCE LOG</span>
+      </div>
+
+      <div class="section-heading-row">
+        <div>
+          <h2 class="header-text section-title">Work Experience<span class="heading-dot">.</span></h2>
+          <p class="section-description">
+            Where I've worked and what I've contributed.
+          </p>
+        </div>
+
+        <label class="filter-toggle" for="toggle-technical">
+          <input
+            type="checkbox"
+            id="toggle-technical"
+            name="toggle-technical"
+            value="toggle-technical"
+            checked
+            class="filter-checkbox"
+          >
+          <span>Highlighted roles only</span>
+        </label>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div id="work-experience-container" class="space-y-3"></div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section content-section">
+
+      <div class="section-topline">
+        <span>02 / SELECTED WORK</span>
+        <span>PROJECT INDEX</span>
+      </div>
+
+      <div class="section-heading-row">
+        <div>
+          <h2 class="header-text section-title">Projects<span class="heading-dot">.</span></h2>
+          <p class="section-description">
+            A collection of things I've built, explored, and experimented with.
+          </p>
         </div>
       </div>
 
-      <section id="work-experience-container" class="mt-4 space-y-3">
-      </section>
-    </div>
+      <div class="project-toolbar">
+        <span class="toolbar-label">FILTER BY DISCIPLINE</span>
 
-    <!--Projects-->
-    <div id="projects" class="section mb-24">
-      <div class="flex flex-row items-center justify-between w-full">
-        <p class="header-text">Projects</p>
-        <div class="flex flex-row gap-2 mt-1">
-          <button class="sorting-button" id="embedded-button">Embedded</button>
-          <button class="sorting-button" id="fullstack-button">Full Stack</button>
-          <button class="sorting-button" id="gamedev-button">Game Dev</button>
-          <button class="sorting-button" id="webdev-button">Web</button>
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button type="button" class="sorting-button" id="embedded-button">Embedded</button>
+          <button type="button" class="sorting-button" id="fullstack-button">Full Stack</button>
+          <button type="button" class="sorting-button" id="gamedev-button">Game Dev</button>
+          <button type="button" class="sorting-button" id="webdev-button">Web</button>
         </div>
       </div>
 
-      <section id="projects-container" class="mt-4 grid gap-4 grid-cols-1 md:grid-cols-2">
-      </section>
-    </div>
+      <div class="section-divider"></div>
 
-    <!--Gallery-->
-    <div id="gallery" class="section mb-24">
-      <div class="flex flex-row items-center justify-between w-full">
-        <p class="header-text">Gallery</p>
+      <div id="projects-container" class="project-grid"></div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section content-section">
+
+      <div class="section-topline">
+        <span>03 / VISUAL ARCHIVE</span>
+        <span>GALLERY</span>
       </div>
 
-      <section id="gallery-container" class="mt-4 gap-4">
-        <div class="project-card">
-          <p class="mini-text self-center">Gallery coming soon!</p>
+      <div class="section-heading-row">
+        <div>
+          <h2 class="header-text section-title">Gallery<span class="heading-dot">.</span></h2>
+          <p class="section-description">
+            A closer look at the things I create.
+          </p>
         </div>
-      </section>
-    </div>
+      </div>
 
-    <!--------------------JS-------------------->
-    <script type="module" src="/src/main.js"></script>
-    <!--------------------JS-------------------->
-  </body>
+      <div class="section-divider"></div>
+
+      <div id="gallery-container" class="gallery-container">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-inner">
+            <span class="gallery-icon" aria-hidden="true">◇</span>
+            <h3>Visual archive in progress.</h3>
+            <p>
+              Project photos, prototypes, and other work will
+              find their way here.
+            </p>
+            <span class="gallery-coming-soon">COMING SOON / 2026</span>
+          </div>
+          <span class="gallery-corner gallery-corner-tl"></span>
+          <span class="gallery-corner gallery-corner-br"></span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <div>
+          <span class="footer-eyebrow">END OF DOCUMENT / 001</span>
+          <h2>Let's build something<span class="heading-dot">.</span></h2>
+          <p>Always interested in interesting problems and new ideas.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/iracheck"
+             target="_blank"
+             rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://linkedin.com/in/iracheck"
+             target="_blank"
+             rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="#about-me">Back to top ↑</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 IRA CHECK</span>
+        <span>DESIGNED & DEVELOPED BY IRA CHECK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
